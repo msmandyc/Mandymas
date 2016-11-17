@@ -1,0 +1,64 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Birthday Countdown</title>
+<style type="text/css">
+#container {
+	position: absolute;
+	margin: auto auto auto auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 80%;
+	height: 280pt;
+}
+
+div {
+	font-family: sans-serif;
+	font-size: 36pt;
+	text-align: center;
+}
+
+#countdown {
+	padding-top: 30pt;
+	font-size: 72pt;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<div>
+Time until<br><em> Mandy's birthday!</em>
+</div>
+<div id="countdown">08:13:08:55.23</div>
+</div>
+
+<script>
+let countdown = document.getElementById("countdown");
+let targetDate = Date.UTC(2017, 8, 7, 08, 00, 00);
+
+function updateCountdown()
+{
+	let remaining = targetDate - Date.now();
+	
+	if (remaining < 0) {
+		countdown.innerHTML = "OMG it's Mandy's birthday!!!";
+		return;
+	}
+	
+	let sec = ("00" + (remaining / 1000 % 60).toFixed(2)).slice(-5);
+	let min = ("00" + Math.floor(remaining / 1000 / 60 % 60)).slice(-2);
+	let hour = ("00" + Math.floor(remaining / 1000 / 60 / 60 % 24)).slice(-2);
+	let day = ("000" + Math.floor(remaining / 1000 / 60 / 60 / 24)).slice(-3);
+	
+	countdown.innerHTML = day + ":" + hour + ":" + min + ":" + sec;
+
+	window.requestAnimationFrame(updateCountdown);
+}
+
+console.log(targetDate - Date.now());
+
+window.requestAnimationFrame(updateCountdown);
+</script>
+
+</body></html>
