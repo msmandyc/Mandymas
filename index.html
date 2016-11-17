@@ -1,6 +1,6 @@
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>New Year Countdown</title>
+<title>Hawaii All Hands Countdown</title>
 <style type="text/css">
 #container {
 	position: absolute;
@@ -33,7 +33,7 @@ img {
 <body>
 <div id="container">
 <div>
-	Time until<br>New Year
+	Time until<br>Hawaii All Hands
 </div>
 <div id="countdown">08:13:08:55.23</div>
 <A HREF="https://www.instagram.com/msmandyc/">Follow me!</A>
@@ -43,14 +43,14 @@ img {
 
 <script>
 let countdown = document.getElementById("countdown");
-let targetDate = Date.UTC(2017, 0, 01, 00, 00, 00);
+let targetDate = Date.UTC(2016, 11, 05, 00, 00, 00);
 
 function updateCountdown()
 {
 	let remaining = targetDate - Date.now();
 	
 	if (remaining < 0) {
-		countdown.innerHTML = "HAPPY NEW YEAR!!!";
+		countdown.innerHTML = "HELLO HAWAII!!!";
 		return;
 	}
 	
