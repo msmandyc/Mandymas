@@ -20,13 +20,13 @@ div {
 }
 
 img {
-	width: 200px;
-	border: black solid 2px;
+	width: 300px;
+	border: Black solid 2px;
 }
 	
 #countdown {
 	padding-top: 30pt;
-	font-size: 50pt;
+	font-size: 70pt;
 }
 </style>
 </head>
@@ -36,8 +36,8 @@ img {
 	Time until<br>New Year
 </div>
 <div id="countdown">08:13:08:55.23</div>
+<A HREF="https://www.instagram.com/msmandyc/">Follow me!</A>
 <img src="https://igcdn-photos-f-a.akamaihd.net/hphotos-ak-xat1/t51.2885-15/e35/15034688_1768783073388749_3338534025424797696_n.jpg?ig_cache_key=MTM4MTQ1ODU1NjAwNDY1ODI1OA%3D%3D.2">
-<img src="https://igcdn-photos-h-a.akamaihd.net/hphotos-ak-xat1/t51.2885-15/s640x640/sh0.08/e35/14565013_1770290603230751_6060808173076348928_n.jpg?ig_cache_key=MTM4MjE3NzM3MTIyNzE5NzU5NA%3D%3D.2">
 	</div>
 
 <script>
@@ -49,7 +49,7 @@ function updateCountdown()
 	let remaining = targetDate - Date.now();
 	
 	if (remaining < 0) {
-		countdown.innerHTML = "OMG it's Mandy's birthday!!!";
+		countdown.innerHTML = "HAPPY NEW YEAR!!!";
 		return;
 	}
 	
@@ -58,7 +58,7 @@ function updateCountdown()
 	let hour = ("00" + Math.floor(remaining / 1000 / 60 / 60 % 24)).slice(-2);
 	let day = ("000" + Math.floor(remaining / 1000 / 60 / 60 / 24)).slice(-3);
 	
-	countdown.innerHTML = day + " Days " + hour + " Hours " + min + " Mins " + sec + " Secs ";
+	countdown.innerHTML = day + ":" + hour + ":" + min + ":" + sec + ":";
 
 	window.requestAnimationFrame(updateCountdown);
 }
