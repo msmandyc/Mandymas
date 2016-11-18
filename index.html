@@ -16,6 +16,7 @@
 body {
 	background-color: #f4f4f4;
 	background: url(http://www.pptbackgrounds.org/uploads/xmas-white-backgrounds-wallpapers.jpg)
+	background-size: cover;
 }
 	
 div {
@@ -49,9 +50,8 @@ a {
 <a id="instagram" href="https://www.instagram.com/msmandyc/">Follow me!</a>
 <div id="container">
 	Time until<br>MozLondon Decemberfest 2016
-<img src="https://farm6.staticflickr.com/5622/31045398666_e19a605b80_z.jpg">
 <div id="countdown">08:13:08:55.23</div>
-
+<img src="https://farm6.staticflickr.com/5622/31045398666_e19a605b80_z.jpg">
 
 <script>
 let countdown = document.getElementById("countdown");
@@ -62,11 +62,11 @@ function updateCountdown()
 	let remaining = targetDate - Date.now();
 	
 	if (remaining < 0) {
-		countdown.innerHTML = "HELLO HAWAII!!!";
+		countdown.innerHTML = "HAPPY HOLIDAY!!!";
 		return;
 	}
 	
-	let sec = ("00" + (remaining / 1000 % 60).toFixed(2)).slice(-5);
+	let sec = ("00" + (remaining / 1000 % 60).toFixed(2)).slice(-2);
 	let min = ("00" + Math.floor(remaining / 1000 / 60 % 60)).slice(-2);
 	let hour = ("00" + Math.floor(remaining / 1000 / 60 / 60 % 24)).slice(-2);
 	let day = ("000" + Math.floor(remaining / 1000 / 60 / 60 / 24)).slice(-3);
