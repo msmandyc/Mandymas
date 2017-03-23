@@ -65,20 +65,20 @@ a {
 <body>
 <div id="container">
 <iframe src="//giphy.com/embed/9oTfLZiuUyIM" width="450" height="240" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p>
-	Time until<br>MozLondon Decemberfest 2017
+	Time until<br>Mozilla Friends & Family Day 2017
 <div id="countdown">08:13:08:55.23</div>
 <img id="LON" src="https://farm6.staticflickr.com/5622/31045398666_e19a605b80_z.jpg">
 
 <script>
 let countdown = document.getElementById("countdown");
-let targetDate = Date.UTC(2017, 11, 25, 00, 00, 00);
+let targetDate = Date.UTC(2017, 05, 10, 00, 00, 00);
 
 function updateCountdown()
 {
 	let remaining = targetDate - Date.now();
 	
 	if (remaining < 0) {
-		countdown.innerHTML = "HAPPY HOLIDAYS!!!";
+		countdown.innerHTML = "HAPPY FRIENDS & FAMILY DAY 2017!!!";
 		return;
 	}
 	
